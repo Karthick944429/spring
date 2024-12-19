@@ -14,6 +14,7 @@ public class MovieTicketController {
 
     @PostMapping("/movieDetails")
     public ResponseEntity movieDetails(@RequestBody MovieBook request) {
+        System.out.printf("Hello");
         return ResponseEntity.status(HttpStatus.CREATED).body(movieTicketService.movieDetailsAssign(request));
     }
 }
